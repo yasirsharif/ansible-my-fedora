@@ -1,0 +1,56 @@
+---
+# defaults file for ansible-my-fedora
+basic_packages:
+  - vlc
+  - tmux
+  - fzf
+  - bash-completion
+  - vim
+  - htop
+  - jq
+  - sshfs
+  - xclip
+  - cheat
+  - tldr
+  - thefuck
+  - code
+  - gimp
+  - gnome-network-displays
+  - qbittorrent
+  - toilet
+  - cowsay
+  - fortune-mod
+  - rclone
+  - lpf-mscore-fonts
+  - lpf-cleartype-fonts
+  - geary
+  - tlp-rdw
+  - tlp
+  - gparted
+  - unzip
+  - p7zip
+  - p7zip-plugins
+  - unrar
+  - chromium
+  - podman-compose
+  - obs-studio
+  - ffmpeg
+  - gstreamer1-plugins-good-extras
+  - https://atom.io/download/rpm
+  - https://zoom.us/client/latest/zoom_x86_64.rpm
+
+dev_tools:
+  - wireguard
+  - rdesktop
+  - telnet
+  #- zoom
+  - remmina
+  - remmina-plugins-rdp
+  #- NetworkManager-fortisslvpn
+  #- NetworkManager-fortisslvpn-gnome
+  #- openfortivpn
+  - forticlient
+  #- wgctrl
+  #- wireguard-tools
+  - nmap
+  - wireshark

@@ -1,0 +1,23 @@
+---
+- name: Touchpad tap as click
+  dconf:
+    key: "/org/gnome/desktop/peripherals/touchpad/tap-to-click"
+    value: "true"
+#  notify: "touchpad change message"
+
+- name: Nautilus - sort folders before files
+  dconf:
+    key: "/org/gtk/settings/file-chooser/sort-directories-first"
+    value: "true"
+
+- name: Configure available keyboard layouts in Gnome
+  community.general.dconf:
+    key: "/org/gnome/desktop/input-sources/sources"
+    value: "[('xkb', 'us'), ('xkb', 'ara')]"
+    state: present
+
+- name: Configure available keyboard layouts in Gnome
+  community.general.dconf:
+    key: "/org/gnome/desktop/wm/keybindings/switch-input-source"
+    value: "['<Alt>Shift_L']"
+    state: present

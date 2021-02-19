@@ -1,0 +1,6 @@
+---
+- name: Install basic packages
+  ansible.builtin.package:
+    name: "{{ basic_packages }}"
+    state: present
+  become: yes

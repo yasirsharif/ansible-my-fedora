@@ -1,0 +1,6 @@
+---
+- name: Install Dev and Ops packages
+  ansible.builtin.package:
+    name: "{{ dev_tools }}"
+    state: present
+  become: yes
