@@ -5,7 +5,6 @@ basic_packages:
   - tmux
   - fzf
   - bash-completion
-  - vim
   - htop
   - jq
   - sshfs
@@ -13,8 +12,6 @@ basic_packages:
   - cheat
   - tldr
   - thefuck
-  - code
-  - gimp
   - gnome-network-displays
   - qbittorrent
   - toilet
@@ -32,25 +29,30 @@ basic_packages:
   - p7zip-plugins
   - unrar
   - chromium
-  - podman-compose
   - obs-studio
   - ffmpeg
   - gstreamer1-plugins-good-extras
-  - https://atom.io/download/rpm
+  - gimp
   - https://zoom.us/client/latest/zoom_x86_64.rpm
 
 dev_tools:
+  - https://atom.io/download/rpm
+  - code
+  - vim
+  - podman-compose
+
+sys_tools:
   - wireguard
   - rdesktop
   - telnet
-  #- zoom
   - remmina
   - remmina-plugins-rdp
-  #- NetworkManager-fortisslvpn
-  #- NetworkManager-fortisslvpn-gnome
-  #- openfortivpn
   - forticlient
-  #- wgctrl
-  #- wireguard-tools
   - nmap
   - wireshark
+  - tcpdump
+  - vmstat
+  - iostat
+  - iotop
+  - strace
+  - ltrace
