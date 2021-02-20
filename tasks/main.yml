@@ -16,7 +16,7 @@
     - name: Install Dev and Ops tools
       include_tasks: dev.yml
     - name: Install system tools
-      include_tasks: dev.yml
+      include_tasks: sys-tools.yml
     - debug:
         msg: Configure my desktop, mouse and keyboard settings
     - name: Tweak my desktop
