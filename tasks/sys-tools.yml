@@ -1,0 +1,6 @@
+---
+- name: Install basic packages
+  ansible.builtin.package:
+    name: "{{ sys_tools }}"
+    state: present
+  become: yes
