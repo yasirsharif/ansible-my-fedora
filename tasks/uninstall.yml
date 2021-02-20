@@ -1,14 +1,8 @@
 ---
-- name: Remove unneeded Packages
-  yum:
-    name:
-      - gnome-boxes
-    state: absent
-  become: yes
-
 - name: Remove unwanted Packages
   package:
     name:
+      - gnome-boxes
       - rhythmbox
       - virtualbox-guest-additions
     state: absent
