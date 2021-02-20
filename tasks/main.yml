@@ -9,12 +9,16 @@
   tasks:
     - debug:
         msg: Setup my Fedora Laptop
-    - name: install required repositories
+    - name: Install required repositories
       include_tasks: repos.yml
     - name: Install basic packages
       include_tasks: packages.yml
-    - name: install Dev and Ops tools
+    - name: Install Dev and Ops tools
       include_tasks: dev.yml
+    - name: Install system tools
+      include_tasks: dev.yml
+    - debug:
+        msg: Configure my desktop, mouse and keyboard settings
     - name: Tweak my desktop
       include_tasks: desktop-config.yml
     - debug:
