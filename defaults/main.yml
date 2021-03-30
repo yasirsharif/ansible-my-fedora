@@ -31,12 +31,15 @@ basic_packages:
   - chromium
   - obs-studio
   - ffmpeg
+  - gstreamer1
+  - gstreamer1-plugin-openh264
+  - openh264
   - gstreamer1-plugins-good-extras
   - gimp
-  - https://zoom.us/client/latest/zoom_x86_64.rpm
+  # - https://zoom.us/client/latest/zoom_x86_64.rpm
 
 dev_tools:
-  - https://atom.io/download/rpm
+  # - https://atom.io/download/rpm
   - code
   - vim
   - podman-compose
@@ -51,8 +54,11 @@ sys_tools:
   - nmap
   - wireshark
   - tcpdump
-  - vmstat
-  - iostat
+  - procps-ng
+  - sysstat
   - iotop
   - strace
   - ltrace
+  - bind-utils
+  - openssl
+  - azure-cli

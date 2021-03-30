@@ -27,6 +27,15 @@
     disable_gpg_check: yes
   become: yes
 
+- name: Azure CLI repository
+  yum_repository:
+    name: azure-cli
+    description: Azure CLI repository
+    baseurl: https://packages.microsoft.com/yumrepos/azure-cli
+    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+    gpgcheck: yes
+  become: yes
+
 - name: install all updates
   package:
     name: '*'
