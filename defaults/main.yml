@@ -57,6 +57,7 @@ sys_tools:
   - procps-ng
   - sysstat
   - iotop
+  - iftop
   - strace
   - ltrace
   - bind-utils
