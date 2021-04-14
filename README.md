@@ -35,7 +35,7 @@ Example Playbook
 ----------------
 
 Below is part of the main.yml file
-`
+```
 ---
 
 - hosts: localhost
@@ -61,7 +61,7 @@ Below is part of the main.yml file
         msg: Uninstalling unwanted packages
     - name: remove unwanted apps
       include_tasks: uninstall.yml
-`
+```
 License
 
 -------
