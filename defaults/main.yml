@@ -63,3 +63,8 @@ sys_tools:
   - bind-utils
   - openssl
   - azure-cli
+  - iperf3
+  - python3-netaddr
+  - qrencode
+  - dnf-utils
+  - needrestart
