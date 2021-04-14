@@ -62,8 +62,8 @@ Below is part of the main.yml file
     - name: remove unwanted apps
       include_tasks: uninstall.yml
 ```
-License
 
+License
 -------
 GPL-3.0 License
 
