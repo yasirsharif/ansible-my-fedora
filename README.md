@@ -1,8 +1,8 @@
-Role Name
+ansible-my-fedora
 =========
 
 A simple playbook to automatically configure my Fedora laptop.
-This role is inspired by:
+This role is inspired by: https://gitlab.com/MikkCZ/ansible-fedora
 
 Requirements
 ------------
@@ -16,7 +16,7 @@ change to the directory where you cloned the repository `cd ansbile-my-fedora` a
 if everything works fine, then run:
 `ansible-playbook tasks/main.yml --ask-become-pass`
 
-Done.
+Done!
 
 If Atom and Zoom installers throw an error:
 *fatal: [localhost]: FAILED! => {"changed": false, "msg": "Failure downloading https://atom.io/download/rpm, Request failed: <urlopen error [Errno -3] Temporary failure in name resolution>", "results": []}*
@@ -63,12 +63,14 @@ Below is part of the main.yml file
       include_tasks: uninstall.yml
 `
 License
--------
 
+-------
 GPL-3.0 License
 
 Author Information
 ------------------
 Yasir ElSharif
-@yasirsharif
+
+[@yasirsharif](https://twitter.com/yasirsharif)
+
 https://www.linkedin.com/in/yasir-elsharif-8806a343/
