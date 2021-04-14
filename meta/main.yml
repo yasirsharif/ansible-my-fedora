@@ -1,7 +1,7 @@
 galaxy_info:
   author: Yasir Elsharif
   description: Ansible my fedora laptop
-  company: your company (optional)
+  company: AutomateWiz
 
   # If the issue tracker for your role is not on github, uncomment the
   # next line and provide a value
