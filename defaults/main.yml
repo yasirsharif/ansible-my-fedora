@@ -68,3 +68,5 @@ sys_tools:
   - qrencode
   - dnf-utils
   - needrestart
+  - python3-mitogen
+  - youtube-dl
