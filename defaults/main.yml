@@ -50,7 +50,7 @@ sys_tools:
   - telnet
   - remmina
   - remmina-plugins-rdp
-  - forticlient
+  #  - forticlient
   - nmap
   - wireshark
   - tcpdump
@@ -70,3 +70,5 @@ sys_tools:
   - needrestart
   - python3-mitogen
   - youtube-dl
+direct_install:
+  - https://links.fortinet.com/forticlient/rhel/vpnagent
