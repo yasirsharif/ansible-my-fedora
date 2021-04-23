@@ -8,13 +8,10 @@
     gpgcheck: yes
   become: yes
 
-- name: Add Fortinet repository
-  yum_repository:
-    name: forticlient
-    description: Forticlient Repo
-    baseurl: https://repo.fortinet.com/repo/6.4/centos/7/os/x86_64
-    gpgkey: https://repo.fortinet.com/repo/6.4/centos/7/os/x86_64/RPM-GPG-KEY
-    gpgcheck: yes
+- name: Import Fortinet GPG key from a url
+  rpm_key:
+    state: present
+    key: https://repo.fortinet.com/repo/centos/7/os/x86_64/RPM-GPG-KEY
   become: yes
 
 - name: fedora-workstation-repositories and other direct installation
