@@ -25,3 +25,5 @@
         msg: Uninstalling unwanted packages
     - name: remove unwanted apps
       include_tasks: uninstall.yml
+    - name: Install packages without gpg check
+      include_tasks: direct-install.yml
