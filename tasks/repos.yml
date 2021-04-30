@@ -8,6 +8,15 @@
     gpgcheck: yes
   become: yes
 
+- name: Add MS Teams repository
+  yum_repository:
+    name: teams
+    description: Visual Studio Code
+    baseurl: https://packages.microsoft.com/yumrepos/ms-teams
+    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
+    gpgcheck: yes
+  become: yes
+
 - name: Import Fortinet GPG key from a url
   rpm_key:
     state: present
