@@ -36,10 +36,9 @@ basic_packages:
   - openh264
   - gstreamer1-plugins-good-extras
   - gimp
-  # - https://zoom.us/client/latest/zoom_x86_64.rpm
+  - teams
 
 dev_tools:
-  # - https://atom.io/download/rpm
   - code
   - vim
   - podman-compose
@@ -50,7 +49,6 @@ sys_tools:
   - telnet
   - remmina
   - remmina-plugins-rdp
-  #  - forticlient
   - nmap
   - wireshark
   - tcpdump
@@ -72,3 +70,9 @@ sys_tools:
   - youtube-dl
 direct_install:
   - https://links.fortinet.com/forticlient/rhel/vpnagent
+  - https://zoom.us/client/latest/zoom_x86_64.rpm
+  - https://atom.io/download/rpm
+games:
+  - steam
+  - supertux
+  - supertuxkart
