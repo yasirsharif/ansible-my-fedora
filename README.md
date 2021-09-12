@@ -34,12 +34,6 @@ If you configured sudo without password:
 
 Done!
 
-If Atom and Zoom installers throw an error:
-
-*fatal: [localhost]: FAILED! => {"changed": false, "msg": "Failure downloading https://atom.io/download/rpm, Request failed: <urlopen error [Errno -3] Temporary failure in name resolution>", "results": []}*
-
-Just re-run the playbook or disable them in default/main.yml file.
-
 Role Variables
 --------------
 
