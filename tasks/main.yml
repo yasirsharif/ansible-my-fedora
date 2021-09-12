@@ -27,3 +27,7 @@
       include_tasks: uninstall.yml
     - name: Install packages without gpg check
       include_tasks: direct-install.yml
+    - debug:
+        msg: Installing flatpak packages
+    - name: Install Flatpaks
+      include_tasks: flatpaks.yml

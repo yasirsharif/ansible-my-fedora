@@ -20,9 +20,8 @@ basic_packages:
   - rclone
   - lpf-mscore-fonts
   - lpf-cleartype-fonts
-  - geary
-  - tlp-rdw
-  - tlp
+#  - tlp-rdw
+#  - tlp
   - gparted
   - unzip
   - p7zip
@@ -36,7 +35,7 @@ basic_packages:
   - openh264
   - gstreamer1-plugins-good-extras
   - gimp
-  - teams
+#  - teams
 
 dev_tools:
   - code
@@ -44,7 +43,7 @@ dev_tools:
   - podman-compose
 
 sys_tools:
-  - wireguard
+  - wireguard-tools
   - rdesktop
   - telnet
   - remmina
@@ -70,9 +69,14 @@ sys_tools:
   - youtube-dl
 direct_install:
   - https://links.fortinet.com/forticlient/rhel/vpnagent
-  - https://zoom.us/client/latest/zoom_x86_64.rpm
-  - https://atom.io/download/rpm
+  #- https://zoom.us/client/latest/zoom_x86_64.rpm
+    #  - https://atom.io/download/rpm
 games:
-  - steam
-  - supertux
-  - supertuxkart
+#  - steam
+#  - supertux
+#  - supertuxkart
+flatpaks:
+  - org.signal.Signal
+  - org.stellarium.Stellarium
+  - io.atom.Atom
+  - us.zoom.Zoom
