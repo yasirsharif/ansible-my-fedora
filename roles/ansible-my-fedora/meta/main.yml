@@ -15,4 +15,4 @@ galaxy_info:
     - Flatpak
     - Laptop
 dependencies: 
-  - community.general
+#  - community.general

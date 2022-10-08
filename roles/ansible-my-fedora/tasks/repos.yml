@@ -1,6 +1,9 @@
 ---
 - name: Add VS Code repository
-  yum_repository:
+  tags:
+    - never
+    - dev
+  ansible.builtin.yum_repository:
     name: vscode
     description: Visual Studio Code
     baseurl: https://packages.microsoft.com/yumrepos/vscode
@@ -8,23 +11,17 @@
     gpgcheck: yes
   become: yes
 
-- name: Add MS Teams repository
-  yum_repository:
-    name: teams
-    description: Visual Studio Code
-    baseurl: https://packages.microsoft.com/yumrepos/ms-teams
-    gpgkey: https://packages.microsoft.com/keys/microsoft.asc
-    gpgcheck: yes
-  become: yes
-
 - name: Import Fortinet GPG key from a url
-  rpm_key:
+  become: yes
+  tags:
+    - vpn
+    - never
+  ansible.builtin.rpm_key:
     state: present
     key: https://repo.fortinet.com/repo/centos/7/os/x86_64/RPM-GPG-KEY
-  become: yes
 
 - name: fedora-workstation-repositories and other direct installation
-  package:
+  ansible.builtin.yum:
     name:
       - fedora-workstation-repositories
       - http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-{{ ansible_distribution_version }}.noarch.rpm
@@ -33,8 +30,24 @@
     disable_gpg_check: yes
   become: yes
 
+# - name: Kubernetes repo
+#   become: yes
+#   tags:
+#     - dev
+#     - never
+#   ansible.builtin.yum_repository:
+#     name: kubernetes
+#     description: kubernetes client tools repo
+#     baseurl: https://packages.cloud.google.com/yum/repos/kubernetes-el7-\$basearch
+#     enabled: true
+#     gpgcheck: yes
+#     gpgkey: https://packages.cloud.google.com/yum/doc/rpm-package-key.gpg
+
 - name: Azure CLI repository
-  yum_repository:
+  tags:     description,
+    - dev   
+    - never
+  ansible.builtin.yum_repository:
     name: azure-cli
     description: Azure CLI repository
     baseurl: https://packages.microsoft.com/yumrepos/azure-cli
@@ -43,7 +56,7 @@
   become: yes
 
 - name: install all updates
-  package:
+  ansible.builtin.yum:
     name: '*'
     update_cache: yes
     state: latest

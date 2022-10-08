@@ -1,0 +1,46 @@
+---
+# tasks file for ansible-my-fedora
+# Setup my Fedora Laptop
+
+- name: Install required repositories
+  import_tasks: repos.yml
+- name: Install basic packages
+  tags:
+    - basic
+    - never
+  import_tasks: packages.yml
+- name: Install Dev and Ops tools
+  tags:
+    - dev
+    - never
+  import_tasks: dev.yml
+- name: Install system tools
+  tags:
+    - sys
+    - never
+  import_tasks: sys-tools.yml
+- name: Tweak my desktop
+  tags:
+    - tweak
+    - never
+  import_tasks: desktop-config.yml
+- name: remove unwanted apps
+  tags:
+    - unwanted
+    - never
+  import_tasks: uninstall.yml
+- name: Install packages without gpg check
+  tags:
+    - localinistall
+    - never
+  import_tasks: direct-install.yml
+- name: Install Flatpaks
+  tags:
+    - flatpak
+    - never
+  import_tasks: flatpaks.yml
+- name: Install Games
+  tags:
+    - games
+    - never
+  import_tasks: games.yml

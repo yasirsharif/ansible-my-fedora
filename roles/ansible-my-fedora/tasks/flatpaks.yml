@@ -1,5 +1,6 @@
 ---
 - name: Add the flathub flatpak repository remote to the user installation
+  become: false
   community.general.flatpak_remote:
     name: flathub
     state: present
@@ -7,6 +8,7 @@
     method: user
 
 - name: Install multiple packages
+  become: false
   community.general.flatpak:
     name: "{{ flatpaks }}"
     remote: "flathub"

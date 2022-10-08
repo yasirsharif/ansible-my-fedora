@@ -1,0 +1,9 @@
+---
+- name: Install systools packages
+  become: yes
+  tags:
+    - systools
+    - never
+  ansible.builtin.yum:
+    name: "{{ sys_tools }}"
+    state: present

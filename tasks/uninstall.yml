@@ -1,9 +1,0 @@
----
-- name: Remove unwanted Packages
-  package:
-    name:
-      - gnome-boxes
-      - rhythmbox
-      - virtualbox-guest-additions
-    state: absent
-  become: yes

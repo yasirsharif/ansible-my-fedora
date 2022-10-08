@@ -1,0 +1,10 @@
+---
+- name: list variables
+  loop: "{{ dev_tools }}"
+  debug:
+    msg: "{{ item }}"
+- name: Install Dev and Ops packages
+  ansible.builtin.dnf:
+    name: "{{ dev_tools }}"
+    state: present
+  become: yes

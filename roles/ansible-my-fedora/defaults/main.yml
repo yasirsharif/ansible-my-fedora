@@ -14,8 +14,8 @@ basic_packages:
   - thefuck
   - gnome-network-displays
   - qbittorrent
-  - toilet
-  - cowsay
+#  - toilet
+#- cowsay
   - fortune-mod
   - rclone
   - lpf-mscore-fonts
@@ -28,7 +28,7 @@ basic_packages:
   - p7zip-plugins
   - unrar
   - chromium
-  - obs-studio
+#- obs-studio
   - ffmpeg
   - gstreamer1
   - gstreamer1-plugin-openh264
@@ -41,6 +41,8 @@ dev_tools:
   - code
   - vim
   - podman-compose
+#  - openshift-client
+#  - kubectl
 
 sys_tools:
   - wireguard-tools
@@ -68,15 +70,20 @@ sys_tools:
   - python3-mitogen
   - youtube-dl
 direct_install:
-  - https://links.fortinet.com/forticlient/rhel/vpnagent
-  #- https://zoom.us/client/latest/zoom_x86_64.rpm
-    #  - https://atom.io/download/rpm
+  - https://downloads.citrix.com/21278/ICAClient-rhel-22.9.0.21-0.x86_64.rpm
+#  - https://links.fortinet.com/forticlient/rhel/vpnagent
+#  - https://zoom.us/client/latest/zoom_x86_64.rpm
+#  - https://atom.io/download/rpm
 games:
 #  - steam
 #  - supertux
 #  - supertuxkart
 flatpaks:
-  - org.signal.Signal
-  - org.stellarium.Stellarium
-  - io.atom.Atom
+#- org.signal.Signal
+#- org.stellarium.Stellarium
+#- io.atom.Atom
   - us.zoom.Zoom
+unwanted_packages:
+#  - gnome-boxes  
+  - rhythmbox    
+#  - virtualbox-guest-additions
