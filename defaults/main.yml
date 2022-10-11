@@ -2,10 +2,7 @@
 # defaults file for ansible-my-fedora
 basic_packages:
   - vlc
-  - tmux
   - fzf
-  - bash-completion
-  - htop
   - jq
   - sshfs
   - xclip
@@ -14,33 +11,34 @@ basic_packages:
   - thefuck
   - gnome-network-displays
   - qbittorrent
-  - toilet
-  - cowsay
   - fortune-mod
   - rclone
   - lpf-mscore-fonts
   - lpf-cleartype-fonts
-#  - tlp-rdw
-#  - tlp
   - gparted
   - unzip
   - p7zip
   - p7zip-plugins
   - unrar
   - chromium
-  - obs-studio
   - ffmpeg
   - gstreamer1
   - gstreamer1-plugin-openh264
   - openh264
   - gstreamer1-plugins-good-extras
   - gimp
-#  - teams
 
 dev_tools:
   - code
   - vim
   - podman-compose
+  - toolbox
+  #- openshift-client
+  #- kubectl
+  - vim-syntastic-yaml 
+  - vim-syntastic-python 
+  - vim-syntastic-ansible 
+  - vim-syntastic-html
 
 sys_tools:
   - wireguard-tools
@@ -67,16 +65,24 @@ sys_tools:
   - needrestart
   - python3-mitogen
   - youtube-dl
+  - bash-completion
+  - htop
+  - tmux
 direct_install:
-  - https://links.fortinet.com/forticlient/rhel/vpnagent
-  #- https://zoom.us/client/latest/zoom_x86_64.rpm
-    #  - https://atom.io/download/rpm
+  - https://downloads.citrix.com/21278/ICAClient-rhel-22.9.0.21-0.x86_64.rpm
+#  - https://links.fortinet.com/forticlient/rhel/vpnagent
+#  - https://zoom.us/client/latest/zoom_x86_64.rpm
+#  - https://atom.io/download/rpm
 games:
 #  - steam
 #  - supertux
 #  - supertuxkart
 flatpaks:
-  - org.signal.Signal
-  - org.stellarium.Stellarium
-  - io.atom.Atom
+#- org.signal.Signal
+#- org.stellarium.Stellarium
+#- io.atom.Atom
   - us.zoom.Zoom
+unwanted_packages:
+#  - gnome-boxes  
+  - rhythmbox    
+#  - virtualbox-guest-additions

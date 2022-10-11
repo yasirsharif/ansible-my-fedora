@@ -22,15 +22,15 @@ Customize the packages to be installed (in defaults/main.yml file) or the config
 
 Change to the directory where you cloned the repository `cd ansbile-my-fedora` and dry run:
 
-`ansible-playbook tasks/main.yml --ask-become-pass --check`
+`ansible-playbook test.yml --ask-become-pass --check`
 
 if everything works fine, then run:
 
-`ansible-playbook tasks/main.yml --ask-become-pass`
+`ansible-playbook test.yml --ask-become-pass`
 
 If you configured sudo without password:
 
-`ansible-playbook tasks/main.yml`
+`ansible-playbook test.yml`
 
 Done!
 
@@ -41,38 +41,19 @@ The variables: basic_packages, dev_tools, and sys_tools are defined in defaults/
 
 Dependencies
 ------------
+collections:
 ansible `community.general` collection
 
 Example Playbook
 ----------------
 
-Below is part of the main.yml file
+Below is part of the test.yml file
 ```
 ---
-
 - hosts: localhost
-  connection: local
-  vars_files:
-    - ../defaults/main.yml
-  tasks:
-    - debug:
-        msg: Setup my Fedora Laptop
-    - name: Install required repositories
-      include_tasks: repos.yml
-    - name: Install basic packages
-      include_tasks: packages.yml
-    - name: Install Dev and Ops tools
-      include_tasks: dev.yml
-    - name: Install system tools
-      include_tasks: sys-tools.yml
-    - debug:
-        msg: Configure my desktop, mouse and keyboard settings
-    - name: Tweak my desktop
-      include_tasks: desktop-config.yml
-    - debug:
-        msg: Uninstalling unwanted packages
-    - name: remove unwanted apps
-      include_tasks: uninstall.yml
+  remote_user: user
+  roles:
+    - ansible-my-fedora
 ```
 
 License
