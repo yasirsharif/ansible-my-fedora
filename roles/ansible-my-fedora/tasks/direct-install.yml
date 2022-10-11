@@ -1,7 +1,0 @@
----
-- name: Install packages without gpg check
-  become: yes
-  ansible.builtin.dnf:
-    name: "{{ direct_install }}"
-    state: present
-    disable_gpg_check: yes

@@ -1,6 +1,0 @@
----
-- name: Install games
-  become: true
-  ansible.builtin.dnf:
-    name: "{{ games }}"
-    state: present

@@ -1,9 +1,0 @@
----
-- name: Remove unwanted Packages
-  become: yes
-  tags:
-    - unwanted
-    - never
-  ansible.builtin.yum:
-    name: "{{ unwanted_packages }}"
-    state: absent

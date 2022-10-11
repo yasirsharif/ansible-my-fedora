@@ -7,6 +7,8 @@ galaxy_info:
   platforms:
    - name: Fedora
      versions:
+     - 36
+     - 35
      - 34
      - 33
   galaxy_tags: 
@@ -14,5 +16,6 @@ galaxy_info:
     - Ansible
     - Flatpak
     - Laptop
-dependencies: 
-#  - community.general
+collections: 
+  - community.general
+dependencies: []
