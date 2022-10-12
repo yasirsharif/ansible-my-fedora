@@ -14,9 +14,11 @@ install ansible `community.general` collection:
 
 `ansible-galaxy collection install community.general`
 
-Clone this repository:
+Clone this repository or install the role from Ansible Galaxy:
 
 `git clone https://github.com/yasirsharif/ansible-my-fedora.git`
+
+`ansible-galaxy install yasirsharif.ansible_my_fedora`
 
 Customize the packages to be installed (in defaults/main.yml file) or the configuration (in tasks/desktop-config.yml file) to suit your needs.
 
@@ -26,11 +28,11 @@ Change to the directory where you cloned the repository `cd ansbile-my-fedora` a
 
 if everything works fine, then run:
 
-`ansible-playbook test.yml --ask-become-pass`
+`ansible-playbook test.yml --ask-become-pass --tags update`
 
 If you configured sudo without password:
 
-`ansible-playbook test.yml`
+`ansible-playbook test.yml --tags dev`
 
 Done!
 
