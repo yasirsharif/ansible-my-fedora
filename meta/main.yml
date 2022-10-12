@@ -1,6 +1,6 @@
 galaxy_info:
-  author: Yasir Elsharif
-  description: Ansible my fedora laptop
+  author: Yasir El Sharif
+  description: Ansible my Fedora laptop
   company: AutomateWiz
   license: license (GPL-3.0 License)
   min_ansible_version: 2.9
@@ -12,7 +12,7 @@ galaxy_info:
      - 34
      - 33
   galaxy_tags: 
-    - Fedore
+    - Fedora
     - Ansible
     - Flatpak
     - Laptop
