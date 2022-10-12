@@ -27,19 +27,15 @@ basic_packages:
   - openh264
   - gstreamer1-plugins-good-extras
   - gimp
-
 dev_tools:
   - code
   - vim
   - podman-compose
   - toolbox
-  #- openshift-client
-  #- kubectl
   - vim-syntastic-yaml 
   - vim-syntastic-python 
   - vim-syntastic-ansible 
   - vim-syntastic-html
-
 sys_tools:
   - wireguard-tools
   - rdesktop

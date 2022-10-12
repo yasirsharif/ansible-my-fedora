@@ -1,9 +1,8 @@
 ---
 # tasks file for ansible-my-fedora
 # Setup my Fedora Laptop
-
 - name: fedora-workstation-repositories
-  become: yes
+  become: True
   ansible.builtin.dnf:
     name:
       - fedora-workstation-repositories
@@ -11,20 +10,18 @@
       - http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-{{ ansible_distribution_version }}.noarch.rpm
     state: present
     disable_gpg_check: yes
-
 - name: Install basic packages
-  become: yes
+  become: True
   ansible.builtin.dnf:
     name: "{{ basic_packages }}"
     state: present
-
 - name: Install Dev and Ops tools
   tags:
     - dev
     - never
   block:
     - name: Add VS Code repository
-      become: yes
+      become: True
       tags:
         - never
         - dev
@@ -33,29 +30,27 @@
         description: Visual Studio Code
         baseurl: https://packages.microsoft.com/yumrepos/vscode
         gpgkey: https://packages.microsoft.com/keys/microsoft.asc
-        gpgcheck: yes
-
+        gpgcheck: True
     - name: Azure CLI repository
       tags:     description,
         - dev   
         - never
       ansible.builtin.yum_repository:
+        become: True
         name: azure-cli
         description: Azure CLI repository
         baseurl: https://packages.microsoft.com/yumrepos/azure-cli
         gpgkey: https://packages.microsoft.com/keys/microsoft.asc
         gpgcheck: yes
-      become: yes
 
     - name: Install Dev and Ops packages
+      become: True
       ansible.builtin.dnf:
         name: "{{ dev_tools }}"
         state: present
-      become: yes
-
 
 - name: Install systools packages
-  become: yes
+  become: True
   tags:
     - systools
     - never
@@ -63,9 +58,8 @@
     name: "{{ sys_tools }}"
     state: present
 
-
 - name: Remove unwanted Packages
-  become: yes
+  become: True
   tags:
     - unwanted
     - uninstall
@@ -76,7 +70,7 @@
     state: absent
 
 - name: Install packages without gpg check
-  become: yes
+  become: True
   tags:
     - localinistall
     - never
@@ -86,7 +80,7 @@
     disable_gpg_check: yes
 
 - name: Install Flatpaks
-  become: no
+  become: False
   tags:
     - flatpak
     - never
@@ -104,7 +98,6 @@
         remote: "flathub"
         method: "user"
 
-
 - name: Install Games
   tags:
     - games
@@ -114,7 +107,7 @@
     state: present
 
 - name: Tweak my desktop
-  become: no
+  become: False
   tags:
     - tweak
     - never
@@ -142,7 +135,7 @@
         state: present
 
 - name: install all updates
-  become: yes
+  become: True
   tags:
     - update
     - upgrade
