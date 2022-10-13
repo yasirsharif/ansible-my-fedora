@@ -1,6 +1,5 @@
 ---
-# tasks file for ansible-my-fedora
-# Setup my Fedora Laptop
+# Tasks file for ansible-my-fedora
 - name: fedora-workstation-repositories
   become: True
   ansible.builtin.dnf:
@@ -16,15 +15,12 @@
     name: "{{ basic_packages }}"
     state: present
 - name: Install Dev and Ops tools
+  become: True
   tags:
     - dev
     - never
   block:
     - name: Add VS Code repository
-      become: True
-      tags:
-        - never
-        - dev
       ansible.builtin.yum_repository:
         name: vscode
         description: Visual Studio Code
@@ -32,19 +28,13 @@
         gpgkey: https://packages.microsoft.com/keys/microsoft.asc
         gpgcheck: True
     - name: Azure CLI repository
-      tags:     description,
-        - dev   
-        - never
       ansible.builtin.yum_repository:
-        become: True
         name: azure-cli
         description: Azure CLI repository
         baseurl: https://packages.microsoft.com/yumrepos/azure-cli
         gpgkey: https://packages.microsoft.com/keys/microsoft.asc
         gpgcheck: yes
-
     - name: Install Dev and Ops packages
-      become: True
       ansible.builtin.dnf:
         name: "{{ dev_tools }}"
         state: present
@@ -139,7 +129,7 @@
   tags:
     - update
     - upgrade
-  ansible.builtin.yum:
+  ansible.builtin.dnf:
     name: '*'
     update_cache: yes
     state: latest
