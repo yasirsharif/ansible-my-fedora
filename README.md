@@ -55,7 +55,7 @@ Below is part of the test.yml file
 - hosts: localhost
   remote_user: user
   roles:
-    - ansible-my-fedora
+    - yasirsharif.ansible_my_fedora
 ```
 
 License
