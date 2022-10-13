@@ -1,8 +1,0 @@
----
-- name: Personalize Fedora installation
-  hosts: localhost
-  connection: local
-  remote_user: yasir
-  roles:
-    - ansible-my-fedora
-
