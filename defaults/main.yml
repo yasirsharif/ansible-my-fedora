@@ -8,7 +8,6 @@ basic_packages:
   - xclip
   - cheat
   - tldr
-  - thefuck
   - gnome-network-displays
   - qbittorrent
   - fortune-mod
@@ -65,7 +64,6 @@ sys_tools:
   - htop
   - tmux
 direct_install:
-  - https://downloads.citrix.com/21278/ICAClient-rhel-22.9.0.21-0.x86_64.rpm
 #  - https://links.fortinet.com/forticlient/rhel/vpnagent
 #  - https://zoom.us/client/latest/zoom_x86_64.rpm
 #  - https://atom.io/download/rpm
