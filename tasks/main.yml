@@ -14,10 +14,12 @@
 
 - name: Install basic packages
   become: True
+  tags:
+    - basic
   ansible.builtin.dnf:
     name: "{{ basic_packages }}"
     state: present
-    
+
 - name: Install Dev and Ops tools
   become: True
   tags:
