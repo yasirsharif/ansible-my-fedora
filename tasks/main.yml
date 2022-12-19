@@ -19,6 +19,7 @@
   ansible.builtin.dnf:
     name: "{{ basic_packages }}"
     state: present
+    allowerasing: True
 
 - name: Install Dev and Ops tools
   become: True
