@@ -26,6 +26,14 @@ basic_packages:
   - openh264
   - gstreamer1-plugins-good-extras
   - gimp
+  - fira-code-fonts.noarch
+  - google-roboto-condensed-fonts.noarch
+  - google-roboto-fonts.noarch
+  - google-roboto-mono-fonts.noarch
+  - google-roboto-slab-fonts.noarch
+  - mozilla-fira-fonts-common.noarch
+  - mozilla-fira-mono-fonts.noarch
+  - mozilla-fira-sans-fonts.noarch 
 dev_tools:
   - code
   - vim
